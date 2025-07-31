@@ -417,6 +417,15 @@ ul.highlight-list li {
   transition: all 0.3s ease;
 }
 
+.track-box img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+
 .track-box:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
