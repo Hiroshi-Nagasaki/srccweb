@@ -260,6 +260,7 @@ ul.highlight-list li {
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 15px;
+  border: 4px solid #ccc;
 }
 
 .speaker-card h4 {
@@ -438,6 +439,7 @@ ul.highlight-list li {
 
 /* speakers */
 
+
 .speaker-grid {
   display: flex;
   flex-wrap: wrap;
@@ -463,12 +465,15 @@ ul.highlight-list li {
 .speaker-card img {
   width: 100%;
   max-height: 280px;
-  object-fit: contain; /* fits without cutting */
+  object-fit: contain;
   margin-bottom: 15px;
   background-color: #fff;
   border-radius: 8px;
   padding: 10px;
+  border: none !important; /*  Add this line */
+  box-shadow: none !important; /* In case shadow looks like a line */
 }
+
 
 
 .speaker-card h4 {
@@ -627,4 +632,8 @@ ul.highlight-list li {
       1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
       -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
   }
+}
+
+.speaker-card .image-wrapper {
+  border: none !important;
 }
