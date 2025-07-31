@@ -403,9 +403,10 @@ ul.highlight-list li {
 
 .track-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* 2 fixed columns */
   gap: 30px;
 }
+
 
 .track-box {
   background: white;
@@ -448,24 +449,35 @@ ul.highlight-list li {
 .speaker-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* ensures center alignment */
+  justify-content: center;
+  align-items: stretch; /* all cards same height */
   gap: 40px;
-  margin-top: 20px;
 }
 
+
 .speaker-card {
-  width: 180px;
+  width: 240px; /* slightly bigger cards */
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
 
 .speaker-card img {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 0; /* make square */
-  border: 1px solid #ccc;
-  background-color: #f5f5f5;
+  max-height: 280px;
+  object-fit: contain; /* fits without cutting */
+  margin-bottom: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
 }
+
 
 .speaker-card h4 {
   font-size: 16px;
