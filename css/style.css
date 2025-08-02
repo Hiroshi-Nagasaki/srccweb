@@ -277,26 +277,6 @@ ul.highlight-list li {
 
 /* main */
 
-.hero-banner {
-  background: url("https://www.globalgovernanceproject.org/wp-content/uploads/2022/06/Trudeau.jpg")
-    center center/cover no-repeat;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  position: relative;
-  text-align: center;
-}
-
-.hero-banner::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-
 .hero-content {
   position: relative;
   z-index: 2;
@@ -799,4 +779,39 @@ ul.highlight-list li {
 .social-icons a:hover img {
   transform: scale(1.15);
   opacity: 1;
+}
+
+/* Background Video Styling */
+.hero-banner {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for contrast */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
