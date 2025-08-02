@@ -862,3 +862,18 @@ ul.highlight-list li {
   text-align: justify;
   margin-bottom: 20px;
 }
+
+.contact-section {
+  padding: 40px 20px;
+}
+
+.contact-wrapper {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #000000;
+}
