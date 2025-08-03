@@ -19,6 +19,20 @@ button,
   font-family: "Montserrat", sans-serif !important;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
 body {
   /* font-family: "Montserrat"; */
   font-family: "Montserrat";
@@ -323,23 +337,19 @@ ul.highlight-list li {
   background-color: #031926 !important;
 }
 
-.navbar-custom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f9f9f9;
-  padding: 12px 40px;
-  color: rgb(0, 0, 0);
-  flex-wrap: wrap;
+.navbar,
+.navbar-custom,
+.marquee-wrapper,
+.animated-heading {
+  width: 100vw;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
 }
-.navbar-custom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 10px 40px;
-  gap: 20px;
-}
+
 
 .navbar-brand-logos {
   display: flex;
@@ -572,7 +582,7 @@ ul.highlight-list li {
   margin-bottom: 30px;
   color: hsl(230, 100%, 95%);
   animation: lights 5s 750ms linear infinite;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 /* Animation */
@@ -647,24 +657,29 @@ ul.highlight-list li {
 }
 
 .alumni-grid {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 20px;
   margin-top: 20px;
   margin-bottom: 40px;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
 }
 
+
+
 .alumni-card {
-  width: 10%;
-  min-width: 60px;
   background-color: #ffffff;
   border-radius: 10px;
   padding: 15px 10px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
   transition: transform 0.3s ease;
+  width: 100%; /* NEW — lets grid control size */
 }
+
 
 .alumni-card:hover {
   transform: translateY(-5px);
@@ -876,4 +891,254 @@ ul.highlight-list li {
   font-size: 16px;
   line-height: 1.8;
   color: #000000;
+}
+
+.flip-card {
+  width: 240px;
+  height: 380px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0);
+}
+
+.card-front img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 2px;
+}
+
+.card-front h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.card-front p {
+  font-size: 12px;
+  color: #000000;
+  text-align: center;
+}
+
+.card-back {
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+.card-back a {
+  text-decoration: none;
+}
+
+.linkedin-icon {
+  width: 10px;
+  height: 10px;
+  opacity: 0.8;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.linkedin-icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Cleaner look for student cards */
+.student-card {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 180px;
+}
+
+/* Image section */
+.student-card .card-front {
+  background: transparent;
+  padding: 0;
+}
+
+.student-card .card-front img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Reduce the gap between image and name */
+.student-card .coord-name {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Flip effect stays same */
+.student-card .card-inner {
+  height: auto;
+}
+
+/* Bigger LinkedIn icon on hover */
+.student-card .linkedin-icon {
+  width: 40px;
+  height: 40px;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+.student-card .linkedin-icon:hover {
+  transform: scale(1.2);
+}
+ /* Student card back styling */
+.student-card .card-back {
+  background-color: #f9f9f9 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.student-coordinator-grid {
+  gap: 25px !important;  /* or 20px, or even 15px */
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+footer {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.organising-committee-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-content: center;
+  align-items: start;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.campus-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 10px; /* ↓ reduce space BELOW the heading */
+  color: #000;
+}
+
+
+.campus-image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.campus-image-wrapper img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.speaker-hover {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  width: 240px;
+  height: 350px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.speaker-hover:hover {
+  height: 460px; /* 👈 grows on hover */
+}
+
+.speaker-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.speaker-title {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.speaker-description {
+  font-size: 14px;
+  color: #333;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.speaker-hover:hover .speaker-description {
+  opacity: 1;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+.speakers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* or space-between / space-evenly if preferred */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.speakers-img img {
+  width: 100%;
+  height: 240px; /* Increased from 200px */
+  object-fit: contain; /* 👈 this ensures the full image fits in without cropping */
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
