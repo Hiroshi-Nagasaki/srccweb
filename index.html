@@ -3,28 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Speakers</title>
+    <title>Home</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Lora&display=swap"
-      rel="stylesheet"
-    />
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+
   </head>
   <body>
     <!-- NAVBAR -->
-    <nav
-      style="
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #f9f9f9;
-        padding: 12px 40px;
-        color: rgb(0, 0, 0);
-        flex-wrap: wrap;
-      "
-    >
+    <nav class="site-navbar">
       <!-- Logos -->
-      <div style="display: flex; align-items: center; gap: 30px">
+      <div class="navbar-left">
         <a href="https://srcc.edu/" target="_blank" title="Visit SRCC">
           <img
             src="photos/srcc-transparent-logo.png"
@@ -58,9 +49,7 @@
           />
         </a>
       </div>
-      <div
-        style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap"
-      >
+      <div class="navbar-right">
         <a href="index.html" style="color: rgb(0, 0, 0); text-decoration: none"
           >HOME</a
         >
@@ -84,22 +73,14 @@
         <a
           href="contact.html"
           style="color: rgb(0, 0, 0); text-decoration: none"
-          >CONTACT</a
-        >
-        <a
-          href="register.html"
-          style="
-            background-color: #06002e;
-            padding: 6px 12px;
-            color: #ffffff;
-            font-weight: bold;
-            border-radius: 0px;
-            text-decoration: none;
-          "
-          >REGISTER</a
-        >
+          >CONTACT</a>
+
+         <div class="glow-btn-wrapper">
+  <a href="register.html" class="animated-button">REGISTER</a>
+</div>   
       </div>
     </nav>
+
     <div class="marquee-wrapper">
       <marquee behavior="scroll" direction="left" scrollamount="6">
         📢Abstract Submission: August 15, 2025 | Notification of Acceptance:
@@ -108,78 +89,63 @@
     </div>
 
     <section class="hero-banner">
-  <!-- Background Video -->
   <video autoplay muted loop playsinline class="background-video">
     <source src="photos/bg-video.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
   </video>
-
-  <!-- Foreground Text -->
   <div class="hero-content text-center">
     <h1>WELCOME TO ICAISEG 2025</h1>
     <h2>12-13 SEPTEMBER 2025</h2>
-
-<div style="text-align: center; margin-top: 30px;">
-  <div class="container">
-    <a href="register.html" class="animated-button">REGISTER NOW</a>
-  </div>
-</div>
-
-</div>
-
+    <div class="glow-btn-wrapper" style="margin-top: 30px;">
+      <a href="register.html" class="animated-button">REGISTER NOW</a>
+    </div>
   </div>
 </section>
 
 
+
     <!-- Hero Section -->
+<section class="py-4 bg-light text-center">
+  <div class="container">
+    <h5 style="font-size: 1.6rem; font-weight: bold; margin-bottom: 30px;">
+      Organised By
+    </h5>
+    <div class="d-flex justify-content-center align-items-center flex-wrap gap-5">
+      <img
+        src="photos/kpr_trnsprnt.png"
+        alt="KPR College"
+        class="img-fluid"
+        style="max-height: 100px"
+      />
+      <img
+        src="photos/srcc-transparent-logo.png"
+        alt="SRCC"
+        class="img-fluid"
+        style="max-height: 120px"
+      />
+      <img
+        src="photos/churchill-trnsprnt.webp"
+        alt="Churchill Institute"
+        class="img-fluid"
+        style="max-height: 100px"
+      />
+    </div>
+  </div>
+</section>
 
-    <section class="py-4 bg-light">
-      <div class="container text-center">
-        <h5 class="mb-4"><b>Organised By</b></h5>
-        <div class="row justify-content-center align-items-center">
-          <div class="col-6 col-md-4 mb-3 mb-md-0">
-            <img
-              src="photos/kpr_trnsprnt.png"
-              alt="KPR College"
-              class="img-fluid"
-              style="max-height: 100px"
-            />
-          </div>
-          <div class="col-6 col-md-4 mb-3 mb-md-0">
-            <img
-              src="photos/srcc-transparent-logo.png"
-              alt="SRCC"
-              class="img-fluid"
-              style="max-height: 150px"
-            />
-          </div>
-          <div class="col-6 col-md-4">
-            <img
-              src="photos/churchill-trnsprnt.webp"
-              alt="Churchill Institute"
-              class="img-fluid"
-              style="max-height: 100px"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="about" class="container py-5">
-      <div class="row align-items-center">
-        <!-- Left Column: Image -->
-        <div class="col-md-5 mb-9 mb-md-0">
-          <img
-            src="photos/ai_transparent_bot.png!sw800"
-            alt="Conference Visual"
-            class="img-fluid rounded"
-          />
-        </div>
+   <section id="about" class="container py-5">
+  <div class="row align-items-center">
+    <!-- IMAGE -->
+    <div class="col-md-5 mb-4">
+      <img src="photos/ai_transparent_bot.png!sw800" alt="Conference Visual" class="img-fluid rounded" />
+    </div>
 
-        <!-- Right Column: Text -->
-        <div class="col-md-7 text-justify">
-          <h2 class="animated-heading">ABOUT THE INTERNATIONAL CONFERENCE</h2>
-          <p style="text-align: justify;">
+    <!-- TEXT -->
+    <div class="col-md-7 text-justify">
+      <h2 class="animated-heading">ABOUT THE INTERNATIONAL CONFERENCE</h2>
+      </h2>
+      <div style="text-align: justify; margin-top: 20px">
+        <p>
             Exponentially growing volumes of data, analyzed by increasingly intelligent machines are unlocking new possibilities and enabling solutions to challenges once deemed insurmountable. Advances in Artificial Intelligence (AI) have led to transformative applications across key sectors such as agriculture, healthcare, trade, transport and education. In the realm of digital trade, AI is revolutionizing global supply chains by making them smarter and more agile, thereby facilitating seamless cross-border transactions. At the same time, AI-driven green innovation is accelerating the transition to a low-carbon economy—through energy optimisation in industries and the advancement of circular economies via waste tracking and sustainable resource management.
           </p>
           <p style="text-align: justify;">
@@ -193,15 +159,14 @@
           </p>
           <!-- Buttons -->
 
-          <div class="mt-4">
-            <a href="about.html" class="btn btn-outline-primary me-3"
-              >Read More</a
-            >
-            <a href="register.html" class="btn btn-primary">Register</a>
-          </div>
+          <div class="mt-4 text-center">
+          <a href="about.html" class="btn btn-outline-primary me-3">Read More</a>
+          <a href="register.html" class="btn btn-primary">Register</a>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <section id="call" class="container py-5">
       <div class="row">
