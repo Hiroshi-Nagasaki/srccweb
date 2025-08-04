@@ -1210,7 +1210,6 @@ footer {
   object-fit: cover;
 }
 
-
 * {
   box-sizing: border-box;
 }
@@ -1248,4 +1247,3 @@ body {
   margin: 0 auto;
   padding: 0 15px; /* nice breathing space on small screens */
 }
-
