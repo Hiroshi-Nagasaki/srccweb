@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Speakers</title>
+    <title>About</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Lora&display=swap"
@@ -12,24 +12,14 @@
   </head>
   <body>
     <!-- NAVBAR -->
-    <nav
-      style="
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #f9f9f9;
-        padding: 12px 40px;
-        color: rgb(0, 0, 0);
-        flex-wrap: wrap;
-      "
-    >
+    <nav class="site-navbar">
       <!-- Logos -->
-      <div style="display: flex; align-items: center; gap: 30px">
+      <div class="navbar-left">
         <a href="https://srcc.edu/" target="_blank" title="Visit SRCC">
           <img
             src="photos/srcc-transparent-logo.png"
             alt="SRCC"
-            height="80"
+            height="60"
             style="object-fit: contain"
           />
         </a>
@@ -53,14 +43,12 @@
           <img
             src="photos/churchil-logo-with-australia.png"
             alt="Churchill College"
-            height="80"
+            height="60"
             style="object-fit: contain"
           />
         </a>
       </div>
-      <div
-        style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap"
-      >
+      <div class="navbar-right">
         <a href="index.html" style="color: rgb(0, 0, 0); text-decoration: none"
           >HOME</a
         >
@@ -84,20 +72,11 @@
         <a
           href="contact.html"
           style="color: rgb(0, 0, 0); text-decoration: none"
-          >CONTACT</a
-        >
-        <a
-          href="register.html"
-          style="
-            background-color: #06002e;
-            padding: 6px 12px;
-            color: #ffffff;
-            font-weight: bold;
-            border-radius: 0px;
-            text-decoration: none;
-          "
-          >REGISTER</a
-        >
+          >CONTACT</a>
+
+         <div class="glow-btn-wrapper">
+  <a href="register.html" class="animated-button">REGISTER</a>
+</div>   
       </div>
     </nav>
     <div class="marquee-wrapper">
