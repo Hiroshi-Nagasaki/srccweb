@@ -193,10 +193,11 @@ footer {
 
 h3 {
   font-size: 24px;
-  margin-top: 40px;
+  margin-top: 20px; 
   margin-bottom: 15px;
   text-align: center;
 }
+
 
 ul.highlight-list {
   list-style: none;
@@ -1247,3 +1248,4 @@ body {
   margin: 0 auto;
   padding: 0 15px; /* nice breathing space on small screens */
 }
+
