@@ -1018,7 +1018,7 @@ ul.highlight-list li {
 }
  /* Student card back styling */
 .student-card .card-back {
-  background-color: #f9f9f9 !important;
+  background-color: #ffffff00 !important;
   display: flex;
   justify-content: center;
   align-items: center;
