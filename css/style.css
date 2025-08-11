@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* Load font if not already */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap");
 
@@ -1621,4 +1625,46 @@ body {
 
 .subsection-title {
   margin-top: 20px; /* reduce spacing above headings */
+}
+
+/* Reduce space below PATRONS grid */
+.speaker-grid {
+  margin-bottom: 20px !important;
+}
+
+/* Reduce space above CONVENERS heading */
+.subsection-title {
+  margin-top: 20px !important;
+}
+
+body {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Smooth animation for boxes */
+.pricing-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth animation for patron images */
+.patron-images img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.patron-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
 }
