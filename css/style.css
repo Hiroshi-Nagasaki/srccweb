@@ -122,23 +122,29 @@ footer {
 
 /* Ticker styling aligned with aesthetic */
 .marquee-wrapper {
-  background-color: #0b2545 !important;
-  color: white !important;
-  font-family: "Montserrat" !important;
-  font-size: 13px !important;
-  padding: 4px 10px !important;
-  height: 28px !important;
-  overflow: hidden !important;
-  line-height: 1.2 !important;
+  width: 100%;
+  overflow: hidden;
+  background: #07002d; /* optional */
+  color: white
 }
 
-.marquee-wrapper marquee {
-  padding: 0 !important;
-  margin: 0 !important;
-  background: none !important;
-  color: white !important;
-  line-height: 1.2 !important;
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%; /* pushes text off-screen */
+  animation: marquee 30s linear infinite;
 }
+
+.marquee span {
+  display: inline-block;
+  padding-right: 100%; /* makes loop seamless */
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
 
 .hero-banner {
   background: url("https://www.globalgovernanceproject.org/wp-content/uploads/2022/06/Trudeau.jpg")
@@ -1685,4 +1691,15 @@ body {
     width: 90%; /* make them fill most of the screen */
     margin-bottom: 20px;
   }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
 }
